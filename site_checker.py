@@ -16,14 +16,9 @@ for i in site_list:
     if r.status_code == requests.codes.ok:
         print (r.url, r.status_code)
     else:
-         pushoverClient.send_message("The url " + r.url + " failed to resolve. Error code: " + str(r.status_code))
+        print (r.url, r.status_code)
+        pushoverClient.send_message("The url " + r.url + " failed to resolve. Error code: " + str(r.status_code))
        
-
-
-
-
-
-
-# print("Exiting in 3 seconds...")
-# time.sleep(3)
-# sys.exit()
+print("Exiting in 3 seconds...")
+time.sleep(3)
+sys.exit()
