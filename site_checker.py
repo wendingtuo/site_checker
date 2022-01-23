@@ -11,6 +11,10 @@ from sites import site_list
 # Initialize Pushover
 pushoverClient = Client(pushover_user_key, api_token=pushover_api_token)
 
+# Document run time in log files
+print (time.strftime("%c"))
+
+# Main Script
 for i in site_list:
     r = requests.get(i)
     if r.status_code == requests.codes.ok:
